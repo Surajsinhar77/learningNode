@@ -34,20 +34,50 @@ function Cretefiles(filename, fileType, frquencyOfFile, content ){
     }
 }
 
-function Removefiles(filename, fileType, frquencyOfFile, Content){
+function Removefiles(filename, fileType, frquencyOfFile){
     for(let i =0; i<frquencyOfFile; i++){
         fs.unlinkSync(`${getDir}/${filename}${i}.${fileType}`)
     }
 }
 
 //         fname  f/type f/no  Content
-Cretefiles('Ritu', 'txt', 2, "i hate u ");
+Cretefiles('suraj', 'txt', 2, "i hate u ");
 Cretefiles('abhay', 'py', 2, "content ");
 
 
 //           fname  f/type f/no
-Removefiles('abhay', 'py', 2);  
-Removefiles('Ritu', 'txt', 2);
+// Removefiles('abhay', 'py', 2);  
+// Removefiles('suraj', 'txt', 2);
 
+
+// 
+// fs.readdir( getDir , (err ,item)=>{   // readdir is use to read the all file of given or By defult current directory 
+//     if(err){
+//         console.log(err);
+//         return;
+//     }
+//     console.log(item);
+// })
+
+// read Directory function readdir(pathToread, function(getError, theElement))
+fs.readdir(getDir, (er, element) => {
+
+// forEach 
+// element which is Array and then forEach() function( element, otherFunction() to get element one by one )
+    element.forEach(item => {
+        console.log(item);
+    });
+})
+
+
+// this how to read all the file and delete it by loop
+fs.readdir(getDir, (er, element) => {
+
+    // forEach 
+    // element which is Array and then forEach() function( element, otherFunction() to get element one by one )
+    element.forEach(item => {
+        fs.unlinkSync(`${getDir}/${item}`)
+    })
+})
 
 

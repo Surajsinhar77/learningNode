@@ -18,7 +18,6 @@
   "homepage": "https://github.com/Surajsinhar77/learningNode#readme",
   "dependencies": {
     "chalk": "^5.1.2",
-    "colors": "^1.4.0",
-    "nodemon": "^2.0.21"
+    "colors": "^1.4.0"
   }
 }
