@@ -1,0 +1,32 @@
+What is express js 
+
+Express js is a framework in javascript use to write api in for node js
+
+Installtion of Express 
+    > npm i express
+
+Starter
+    import the express 
+    const variable =  require('express');
+
+    Create a instance of express of anyname like this:
+        const instamce_name = express();
+
+    and then create a route to send or request data like this :
+    
+        instance_name.get('/route_name', (request, response)=> {
+            // to get data from url
+            let a = request.query.key_name_of_object;
+            response.send("string adata "+a);
+        })
+
+// Rendring html data using send function
+app.get('/renderHtml', (req, res)=>{
+    res.send(`
+        <input type="text" value = "Suraj" />
+        <p>Rendering Html code from here browser</p>
+    `)
+})
+
+// Created a Server 
+app.listen(5000); 
