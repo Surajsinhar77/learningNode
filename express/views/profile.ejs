@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Profile Page</title>
+</head>
+<body>
+    <%- include('common/header') %>
+    <h1>Profile Page is here </h1>
+
+    <!-- without loop -->
+    <h1>Welcome  <%= detail.name %> </h1>  <!-- this is how we can get data from object ejs--->
+    <h2>Yours Course is : <%= detail.course %></h2>  
+    <h2>Yours Place is : <%= detail.place %></h2>
+
+    <ul>
+        <% detail.skill.forEach((item) => { %> <!-- this is how we can use loop in ejs--->
+            <li> <%= item %> </li>        
+        <% }) %>
+    </ul>
+    <!-- with loop -->
+</body>
+</html>
