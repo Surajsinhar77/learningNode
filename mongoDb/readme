@@ -1,0 +1,13 @@
+command of the mongodb 
+
+* To CREATE database : use database_name
+
+* To DELETE database -> select database : use existing_database_name -> db.dropDatabase() 
+
+* To to USE / goTo database : use existing_database_name
+
+* To CREATE object/document/COLLECTION -> first select the database : use database_name -> and then : db.createCollection('collection_name')
+
+
+* To DELETE COLLECTION -> use existing_database_name -> db.collection_name.deleteOne({key_name: "valueEqualTo"})
+
