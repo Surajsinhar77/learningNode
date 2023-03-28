@@ -10,6 +10,8 @@
 //     const databaseInfo = resultData.db(databaseName);
 //     return databaseInfo.collection(collectionName);
 // }
+
+
 const getData  = require('./mongoConnection')
 
 // const  main =()=>{
@@ -29,7 +31,7 @@ const main = async ()=>{
     data = await data.find().toArray();
     // console.log(data)
     return data;
-} 
+}
 
 module.exports =  main;
 // main();

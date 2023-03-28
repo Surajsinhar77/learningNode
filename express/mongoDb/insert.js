@@ -13,7 +13,6 @@ const insert = async (name, brand, mrp, launchDate) =>{
     }
 }
 
-
 // promiss handel way 
 const printData = () => {
     getData().then((res)=>{
@@ -26,6 +25,6 @@ const printData = () => {
 
 
 // insert('iPhone 10', 'apple', 80500, '01-01-2020')
-
 // printData()
+
 module.exports = insert;
