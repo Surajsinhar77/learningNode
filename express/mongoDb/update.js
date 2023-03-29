@@ -15,4 +15,18 @@ const updateData = async ()=>{
     }
 }
 
+const update = async(mainData,toCheck)=>{
+    const data = await getData();
+    const result = await data.updateOne(
+        {name:toCheck},
+        {$set: mainData}
+    )
+    // console.log(result);
+    // if(result.acknowledged){
+    //     console.log(result.matchedCount)
+    // }
+    return result;
+}
 // updateData()
+
+module.exports = update;

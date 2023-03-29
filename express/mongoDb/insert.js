@@ -13,6 +13,17 @@ const insert = async (name, brand, mrp, launchDate) =>{
     }
 }
 
+const insertObject = async (theData) =>{
+    const db = await getData();
+    const result  = await db.insertOne(  // to inser one collection use insertOne for mant use insertMany 
+        theData
+    )
+    console.log(result);
+    if(result.acknowledged){
+        console.log("data is updated")
+    }
+}
+
 // promiss handel way 
 const printData = () => {
     getData().then((res)=>{
@@ -27,4 +38,4 @@ const printData = () => {
 // insert('iPhone 10', 'apple', 80500, '01-01-2020')
 // printData()
 
-module.exports = insert;
+module.exports = insertObject;
