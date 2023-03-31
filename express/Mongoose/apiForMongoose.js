@@ -21,6 +21,7 @@ app.get('/list', async(req, res)=>{
     res.send(data);
 })
 
+// update api for the 
 app.put('/update/:_id', async (req, res)=>{
     const data = await product.updateOne(
         req.params ,
